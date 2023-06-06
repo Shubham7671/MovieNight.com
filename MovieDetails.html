@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="myprofile.css">
+    <style>
+        .details-container {
+            width: 80%;
+            border: 1px solid grey;
+            margin: auto;
+            margin-top: 140px;
+            margin-bottom: 40px;
+        }
+
+        .cover-image {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+
+            background-image: url("https://png.pngtree.com/back_origin_pic/04/63/53/4c0f59c3f8901298d5e1c0492f57b7e1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .cover-image>div {
+            margin-left: 30px;
+            background-color: transparent;
+
+        }
+
+        #d_title {
+            margin-bottom: 15px;
+            font-size: 35px;
+            background-color: transparent;
+            color: white;
+            font-weight: 900;
+            text-decoration: underline;
+        }
+
+        .cover-image>div>h5 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            background-color: transparent;
+            color: white;
+        }
+
+        .cover-image>div>h6 {
+            width: 100px;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgb(244, 158, 10);
+            font-size: 12px;
+        }
+
+        .time-slot {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .time-slot>label {
+            font-size: 20px;
+            font-weight: 500;
+            color: rgb(146, 144, 144);
+        }
+
+        .time-slot>div>button {
+            padding: 7px;
+            font-size: 12px;
+            font-weight: 600;
+            width: 10%;
+            margin: 15px 15px;
+    
+            border-radius: 10px;
+            border: 2px solid grey;
+
+        }
+
+        .select-time{
+            background-color: white;
+            color: black;
+        }
+        .next-section{
+            display: flex;
+            justify-content: center;
+            margin: 20px 0px;
+
+        }
+        .next-section>a{
+            padding: 15px;
+            width: 20%;
+            border: 2px solid goldenrod;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 900;
+            color: gold;
+           
+            text-align: center;
+        }
+        .next-section>a:hover{
+            background-color: goldenrod;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <img src="http://clipartmag.com/images/movie-day-clipart-2.png" alt="" class="nav-logo">
+        <input class="search" type="search" placeholder="Search by movie name">
+        <div id="anchor-list">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li id="my-booking-container"></li>
+            <li id="admin-container"><a id="admin-btn" href="adminLogin.html">Admin</a></li>
+            <li id="drop-down-container">
+
+            </li>
+            <li id="login-container"><a class="nav-btn" href="login.html">Login</a></li>
+
+        </div>
+    </nav>
+
+    <section>
+        <div class="details-container">
+            <div class="cover-image">
+
+            </div>
+            <div class="time-slot">
+                <h1>Please Select Your Time Slot</h1>
+                <br>
+                <br>
+                <label for="">GALAXY MALL CHANDIGARH</label>
+                <div>
+                    <button>9:00 AM</button>
+                    <button>12:00 PM</button>
+                    <button>02:00 PM</button>
+                    <button>04:00 PM</button>
+                    <button>08:00 PM</button>
+                    <button>12:00 AM</button>
+                </div>
+                <label for="">VR PUNJAB MAll KHARAR</label>
+                <div>
+                    <button>9:00 AM</button>
+                    <button>12:00 PM</button>
+                    <button>02:00 PM</button>
+                    <button>04:00 PM</button>
+                    <button>08:00 PM</button>
+                    <button>12:00 AM</button>
+                    <button>06:00 PM</button>
+                    <button>07:00 PM</button>
+                    <button>01:00 PM</button>
+                    <button>12:00 AM</button>
+                </div>
+                <label for="">INOX SPLANET</label>
+                <div>
+                    <button>9:00 AM</button>
+                    <button>12:00 PM</button>
+                    <button>02:00 PM</button>
+                    <button>04:00 PM</button>
+                    <button>08:00 PM</button>
+                    <button>11:00 AM</button>
+                    <button>08:00 AM</button>
+                    <button>12:00 AM</button>
+                </div>
+                <label for="">CENTRAL MALLL PHASE 12</label>
+                <div>
+                    <button>9:00 AM</button>
+                    <button>12:00 PM</button>
+                    <button>02:00 PM</button>
+                    <button>08:00 PM</button>
+                    <button>12:00 AM</button>
+                </div>
+
+           <div class="next-section">
+            <a href="seatAllocation.html">NEXT</a>
+           </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <hr style="height: 0rem; background-color: gray;">
+    <footer>
+        <div class="footer-section-1">
+            <div>
+                <li>GENERAL</li>
+                <li>ABOUT US</li>
+                <li>FAQ'S</li>
+                <li>INVESTORS SECTION</li>
+                <li>CAREER</li>
+                <li>NEWS</li>
+                <li>FEEDBACK</li>
+            </div>
+            <div>
+                <li>LAUNCHES</li>
+                <li>EVENTS</li>
+                <li>NVSP</li>
+            </div>
+            <div>
+                <li>OUR BRANDS</li>
+                <li>DIRECTOR'S CUT</li>
+                <li>PICTURES</li>
+                <li>ICE</li>
+                <li>IMAX</li>
+                <li>4DX</li>
+                <li>PLAY HOUSE</li>
+            </div>
+            <div>
+                <li>NEWLY ADDED</li>
+                <li>MY GOLD</li>
+                <li>MY LUXE</li>
+                <li>MY P[XL]</li>
+                <li>MY ONYX</li>
+                <li>MY NEST</li>
+                <li>V PRISTINE</li>
+            </div>
+            <div>
+                <li>CINEMAS</li>
+                <li>CINEMAS</li>
+                <li>UPCOMING</li>
+                <li>ADVERTISE</li>
+                <li>BEYOND MOVIES</li>
+                <li>BIRTHDAY REQUEST</li>
+                <li>SUBSCRIBE TO NEWSLETTER</li>
+            </div>
+        </div>
+        <div class="footer-section-2">
+            <div>
+                <img src="https://originserver-static1-uat.pvrcinemas.com/images/panacea.png" alt="">
+                <img src="https://originserver-static1-uat.pvrcinemas.com/images/nortan.png" alt="">
+            </div>
+            <h2>PRIVACY POLICY</h2>
+            <h2>TERMS & CONDITION</h2>
+            <h2>TERMS OF USE</h2>
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+
+
+
+
+
+    </footer>
+
+</body>
+<script>
+    function createProductDetails(data) {
+        let container = document.querySelector(".cover-image");
+        container.innerHTML = "";
+        container.innerHTML = `<img id="d_image"alt="" src=${data.image}>
+                <div>
+                    <h2 id="d_title">${data.title}</h2>
+                    <h5>Language : ${data.language}</h5>
+                    <h5>Genre : ${data.genre}</h5>
+                    <h6>Idmb Rating : 7.6</h6>
+                </div>`
+    }
+
+    let product_id = JSON.parse(localStorage.getItem("product-id"))
+    let baseUrl = `https://movie-booking-site-1xbl.onrender.com/products/${product_id}`
+
+    fetch(baseUrl).then((res) => res.json()).then((data) => {
+        createProductDetails(data)
+    })
+    let time=document.querySelectorAll("button");
+
+    time.forEach((el)=>{
+     el.addEventListener('click',(e)=>{
+    if(document.getElementsByClassName("select-time").length<1){
+        e.target.classList.add("select-time")
+        let showTime=document.getElementsByClassName("select-time")[0].textContent;
+        localStorage.setItem("showTime",JSON.stringify(showTime));
+    }
+    else{
+       alert("select only one time slot at a time");
+       document.getElementsByClassName("select-time")[0].classList.remove("select-time");
+    }
+     
+ })
+    })
+    
+</script>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *:after,
+        *:before {
+            box-sizing: border-box;
+        }
+
+        ul {
+            padding-left: 10px;
+            background-color: transparent;
+        }
+
+        body {
+            font-family: "Josefin Sans", sans-serif;
+            color: #0a0a0a;
+            line-height: 1.4;
+        }
+
+        a {
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .details {
+            max-width: 800px;
+            min-height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -200px;
+            background: rgb(24, 23, 23);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .details__item {
+            display: flex;
+
+            background-color: transparent;
+            background-image: url("https://cdn.wallpapersafari.com/73/59/V06ozM.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .details__user {
+            background: #f6f9fc;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #dadada;
+        }
+
+        .item__quantity {
+            position: absolute;
+            right: 50px;
+            top: 30px;
+            font-size: 20px;
+            background-color: transparent;
+        }
+
+        .item__image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+        }
+
+        .item__image .iphone {
+            margin-top: -10px;
+            margin-left: -100px;
+            width: 300px;
+            height: 200px;
+            background-color: transparent;
+        }
+
+        .item__details {
+            padding: 30px;
+            background-color: transparent;
+        }
+
+        .item__title {
+            font-size: 35px;
+            font-weight: 900;
+            background-color: transparent;
+            color: #a29e9e;
+        }
+
+        .item__price {
+            font-size: 22px;
+            font-weight: 700;
+            color: #f5f5f9;
+            background-color: transparent;
+        }
+
+        .icon {
+            font-size: 16px;
+            vertical-align: middle;
+            background-color: transparent;
+
+        }
+
+        header {
+            min-height: 350px;
+        }
+
+        .payment-main-container {
+            display: flex;
+            width: 70%;
+
+            margin: 70px auto;
+
+        }
+
+        .payment-container:nth-child(1) {
+            width: 45%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: -10px 0px;
+        }
+
+        .payment-container:nth-child(2) {
+            width: 55%;
+            background-color: rgb(15, 15, 15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        h2 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="submit"] {
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 20px;
+            font-weight: 900;
+
+        }
+
+        .item__description {
+            background-color: transparent;
+        }
+
+        .item__description li {
+            background-color: transparent;
+            color: rgb(255, 254, 251);
+            font-size: 15px;
+            font-weight: 700;
+            list-style: none;
+        }
+
+        #pay_image {
+            width: 40%;
+            background-color: transparent;
+
+        }
+
+        #thank {
+            color: green;
+            margin-bottom: 10px;
+            opacity: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <img src="http://clipartmag.com/images/movie-day-clipart-2.png" alt="" class="nav-logo">
+        <input class="search" type="search" placeholder="Search by movie name">
+        <div id="anchor-list">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li id="my-booking-container"></li>
+            <li id="admin-container"><a id="admin-btn" href="adminLogin.html">Admin</a></li>
+            <li id="drop-down-container">
+
+            </li>
+            <li id="login-container"><a class="nav-btn" href="login.html">Login</a></li>
+
+        </div>
+    </nav>
+
+    <!-- payment -->
+    <header>
+
+    </header>
+    <section class="content">
+        <div class="details shadow">
+            <div class="details__item">
+            </div>
+        </div>
+    </section>
+    </div>
+    <hr style="width: 70%; margin: auto; margin-top: 20px;">
+    <div class="payment-main-container">
+
+
+        <div class="payment-container">
+            <h2>Credit/Debit Card</h2>
+            <form id="payment-form">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required>
+
+                <label for="expiration-date">Expiration Date:</label>
+                <input type="text" id="expiration-date" name="expiration-date" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+                <h2>UPI</h2>
+                <label for="cvv">Upi Id </label>
+                <input type="text" id="cvv" name="cvv">
+
+                <input style="margin-top: 10px;" type="checkbox" required>
+                <span>Please read <span style="color: blue;  text-decoration: underline;">terms and condition</span>
+                </span>
+
+                <button type="submit">Pay Now</button>
+            </form>
+        </div>
+
+        <div class="payment-container">
+            <img id="pay_image" src="http://clipart-library.com/img1/1247294.png" alt="">
+        </div>
+
+    </div>
+    <h2 id="thank">Booking Sucessfull ! Thanks you your Booking Id : BK256411126</h2>
+
+    <hr style="height: 0rem; background-color: rgb(77, 76, 76); ">
+
+
+    <footer>
+        <div class="footer-section-1">
+            <div>
+                <li>GENERAL</li>
+                <li>ABOUT US</li>
+                <li>FAQ'S</li>
+                <li>INVESTORS SECTION</li>
+                <li>CAREER</li>
+                <li>NEWS</li>
+                <li>FEEDBACK</li>
+            </div>
+            <div>
+                <li>LAUNCHES</li>
+                <li>EVENTS</li>
+                <li>NVSP</li>
+            </div>
+            <div>
+                <li>OUR BRANDS</li>
+                <li>DIRECTOR'S CUT</li>
+                <li>PICTURES</li>
+                <li>ICE</li>
+                <li>IMAX</li>
+                <li>4DX</li>
+                <li>PLAY HOUSE</li>
+            </div>
+            <div>
+                <li>NEWLY ADDED</li>
+                <li>MY GOLD</li>
+                <li>MY LUXE</li>
+                <li>MY P[XL]</li>
+                <li>MY ONYX</li>
+                <li>MY NEST</li>
+                <li>V PRISTINE</li>
+            </div>
+            <div>
+                <li>CINEMAS</li>
+                <li>CINEMAS</li>
+                <li>UPCOMING</li>
+                <li>ADVERTISE</li>
+                <li>BEYOND MOVIES</li>
+                <li>BIRTHDAY REQUEST</li>
+                <li>SUBSCRIBE TO NEWSLETTER</li>
+            </div>
+        </div>
+        <div class="footer-section-2">
+            <div>
+                <img src="https://originserver-static1-uat.pvrcinemas.com/images/panacea.png" alt="">
+                <img src="https://originserver-static1-uat.pvrcinemas.com/images/nortan.png" alt="">
+            </div>
+            <h2>PRIVACY POLICY</h2>
+            <h2>TERMS & CONDITION</h2>
+            <h2>TERMS OF USE</h2>
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+
+
+
+
+
+    </footer>
+
+</body>
+<script>
+    function createProductDetails(data) {
+        let date = new Date();
+
+
+        let container = document.querySelector(".details__item");
+        container.innerHTML = "";
+        container.innerHTML = `<div class="item__image">
+                    <img class="iphone"
+                        src=${data.image}
+                        alt="">
+                </div>
+                <div class="item__details">
+                    <div class="item__title">
+                       Ticket Details
+                    </div>
+                    <div class="item__price">
+                        ${data.title}
+                    </div>
+                    <div class="item__description">
+                        <ul>
+                            <li>Language : ${data.language}</li>
+                            <li>Genere : ${data.genre}</li>
+                            <li>Seat no : ${seatNo}</li>
+                            <li>Timing : ${date.toDateString()} ${showTimeSet}</li>
+                            <li>Enjoy Your Movie</li>
+                        </ul>
+                    </div>
+                </div>`
+    }
+    let product_id = JSON.parse(localStorage.getItem("product-id"))
+    let seatNo = JSON.parse(localStorage.getItem("seats"));
+    let showTimeSet = JSON.parse(localStorage.getItem("showTime"))
+    let user_id = JSON.parse(localStorage.getItem("user-id"))
+    console.log(user_id)
+    let addBokingDetails = ""
+    // console.log(seatNo)
+
+    let baseUrl = `https://movie-booking-site-1xbl.onrender.com`
+    let dataId = ""
+    fetch(`${baseUrl}/products/${product_id}`).then((res) => res.json()).then((data) => {
+        dataId = data.id
+        createProductDetails(data)
+        addBokingDetails = BookingData(data);
+    })
+    let thank_greet = document.getElementById("thank")
+    let submit_btn = document.querySelector("#payment-form")
+
+    submit_btn.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        thank_greet.textContent = `Booking Sucessfull ! Thanks you your Booking Id : BK127894${dataId}`
+        thank_greet.style.opacity = 1
+        setTimeout(() => {
+            // window.location.assign("index.html")
+        }, 3000);
+        postAllBookedData(addBokingDetails)
+        addDataInSingleUser(addBokingDetails)
+    })
+
+    function postAllBookedData(obj) {
+        fetch(`${baseUrl}/bookings`, {
+            method: 'POST',
+            body: JSON.stringify(obj),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        })
+    }
+    function addDataInSingleUser(obj) {
+        let arr = [];
+
+        fetch(`${baseUrl}/user/${user_id}`).then(res => res.json()).then((data) => {
+            arr = data.product
+            arr.push(obj);
+            patchTheData(arr)
+        })
+
+
+    }
+
+    function patchTheData(arr) {
+        console.log(arr);
+        let obj = {
+          product:arr
+        }
+        fetch(`${baseUrl}/user/${user_id}`, {
+            method: "PATCH",
+            body: JSON.stringify(obj),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        })
+       
+    }
+    function BookingData(data) {
+        let date = new Date();
+        let obj = {
+            bookingImage: `${data.image}`,
+            bookingId: `127894${data.id}`,
+            bookingDate: `${date.toDateString().slice(4)}`,
+            movieName: `${data.title}`,
+            showTime: `${date.toDateString().slice(4, 10)} ${showTimeSet}`,
+            seatNo: seatNo
+        }
+        return obj;
+
+    }
+
+</script>
+
+<script src="index.js"></script>
+
+</html>

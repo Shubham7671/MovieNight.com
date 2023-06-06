@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    padding: 15px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #373a3c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+#anchor-list {
+    display: flex;
+    width: 22%;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#anchor-list li {
+    list-style: none;
+    background-color: transparent
+}
+
+#anchor-list a {
+    text-decoration: none;
+    background-color: transparent;
+    padding: 5px 8px;
+    background-color: transparent;
+
+    border-radius: 4px;
+    color: #bcbfc2;
+}
+
+
+#anchor-list a:hover {
+    color: #797d80;
+    background-color: rgb(27, 26, 26);
+}
+
+nav>img {
+    width: 4rem;
+    background-color: transparent;
+}
+
+.search {
+    width: 45%;
+    background-color: transparent;
+    border-radius: 8px;
+    border: 1px solid rgb(36, 36, 36);
+    font-size: 18px;
+    padding: 0px 15px;
+}
+
+nav>button {
+    padding: 5px 9px;
+    color: white;
+    font-size: 18px;
+    background-color: #484646;
+    border-radius: 8px;
+    border: 1px solid rgb(36, 36, 36);
+}
+
+nav>button>a {
+    text-decoration: none;
+    background-color: #484646;
+
+}
+
+nav>select {
+    width: 13%;
+    background-color: #484646;
+    border-radius: 8px;
+    border: 1px solid rgb(36, 36, 36);
+    font-size: 20px;
+    color: white;
+    padding: 0px 5px;
+
+}
+.slider{
+    width: 99.9%;
+    /* border: 2px solid red; */
+    margin: auto;
+    margin-top: 54px;
+}
+#slider-image{
+    animation: mymove 4s infinite;
+    width: 100%;
+}
+
+@keyframes mymove {
+    0% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
+  }
+
+.land-page {
+
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.container-1 {
+    margin: 40px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-1>div>select {
+
+    border: none;
+    font-size: 14px;
+}
+
+.container-1>h1 {
+    font-size: 30px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 21%);
+    gap: 50px 68px;
+    margin-bottom: 30px;
+}
+
+.products>div {
+    width: 100%;
+    cursor: pointer;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: rgba(255, 255, 255, 0.15) 0px 15px 25px, rgba(255, 255, 255, 0.05) 0px 5px 10px;
+    transition: width 0.5s;
+
+
+}
+
+.products>div:hover {
+    width: 110%;
+}
+
+.products>div>img {
+    width: 100%;
+}
+
+.products>div>button {
+    padding: 6px;
+    border-radius: 8px;
+    border-color: rgb(255, 196, 0);
+    background-color: rgb(255, 196, 0);
+    color: white;
+    font-weight: 700;
+    width: 40%;
+    margin: 10px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: width 0.4s;
+
+
+}
+
+.products>div>button:hover {
+    background-color: white;
+    color: rgb(255, 196, 0);
+    width: 48%;
+
+
+}
+
+.products>div>h2,
+.products>div>h4 {
+    margin-left: 10px;
+}
+
+.products>div>h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.products>div>h4 {
+    color: grey;
+}
+
+.section-11{
+    margin-top: 120px;
+   height: 40vh;
+   background-image: url("https://static.vecteezy.com/system/resources/previews/001/254/680/original/cinema-background-concept-vector.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   opacity: 0.4;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.section-11>h1{
+    background-color: transparent;
+    font-size: 5rem;
+}
+.section-22{
+    width: 90%;
+    margin: auto;
+
+}
+
+footer {
+    width: 80%;
+    margin: auto;
+}
+
+.footer-section-1 {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 70px 0px 40px 0px;
+}
+
+.footer-section-1>div>li {
+    list-style-type: none;
+    line-height: 23px;
+    color: #5c5e60;
+}
+
+.footer-section-1>div>li:first-child {
+    color: rgb(255, 196, 0);
+    font-weight: 900;
+    font-size: 17px;
+}
+
+.footer-section-1>div>li:hover {
+    color: rgb(255, 196, 0);
+
+}
+
+.footer-section-2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin: 40px 0px;
+
+}
+
+.footer-section-2>div {
+    display: flex;
+}
+
+.profile {
+    font-size: 18px;
+    background-color: #484646;
+    border: none;
+}
+
+/* //--------------------------------------------- */
+.dropbtn {
+    background-color: #484646;
+    color: white;
+    padding: 9px;
+    font-size: 18px;
+    border: none;
+    border: 1px solid green;
+    border-radius: 50%;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    color: white;
+    background-color: #373a3c;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e80a0a;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+   
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: rgb(184, 34, 34);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #fffcfc;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: transparent;
+    color: #fdfeff;
+}
+
+.release{
+    background-color: goldenrod;
+    padding: 7px;
+    width: 60%;
+    border-top-right-radius: 5px ;
+    margin-top: 8px;
+    font-size: 12px;
+}
+
+/* # Phone */
+@media only screen and (max-width:320px){
+    .products{
+        grid-template-columns: 100%;
+    }
+}
+
+
+@media only screen and (min-width:321px) and (max-width:768px){
+
+    .products{
+        grid-template-columns: repeat(2,1fr);
+    }
+}

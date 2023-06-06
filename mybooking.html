@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <style>
+        .my-booking-section {
+            width: 95%;
+            min-height: 68vh;
+            border: 1px solid black;
+            margin: 100px auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            color: rgb(223, 217, 217);
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #121111;
+            font-size: 15px;
+        }
+
+        th {
+            background-color: #232222;
+            color: rgb(118, 116, 116);
+        }
+
+        tr:hover {
+            background-color: #393636;
+        }
+
+        .my-booking-image {
+            width: 200px;
+        }
+
+        #download-btn {
+            padding: 8px;
+            border: 1px solid green;
+
+
+        }
+
+        #download-btn:hover {
+
+            background-color: green;
+            color: white;
+
+
+        }
+
+        #cancel-btn {
+            padding: 8px;
+            border: 1px solid red;
+            margin: 0px 7px;
+        }
+
+        #cancel-btn:hover {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <img src="http://clipartmag.com/images/movie-day-clipart-2.png" alt="" class="nav-logo">
+        <input class="search" type="search" placeholder="Search by movie name">
+        <div id="anchor-list">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li id="my-booking-container"></li>
+            <li id="admin-container"><a id="admin-btn" href="adminLogin.html">Admin</a></li>
+            <li id="drop-down-container">
+
+            </li>
+            <li id="login-container"><a class="nav-btn" href="login.html">Login</a></li>
+
+        </div>
+    </nav>
+
+
+
+
+    <div class="my-booking-section">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>S no.</th>
+                    <th>Booking Date</th>
+                    <th>Movie Name</th>
+                    <th>Show Date/Time</th>
+                    <th>Seat No</th>
+                    <th>Download/Cancel</th>
+
+
+                </tr>
+            </thead>
+            <tbody id="booking-container1">
+                <!-- <tr>
+                    <td><img class="my-booking-image"
+                            src="https://originserver-static1-uat.pvrcinemas.com/newweb/movies/thumb/374x226/HO00023474.jpg?v=4"
+                            alt=""></td>
+                    <td>04-08-22</td>
+                    <td>kisi ka bhaia kisi ka jaan</td>
+                    <td>06 24 56:00</td>
+                    <td>cjgcjhvjkvhkjkvhvhbhllbhl</td>
+                    <td><button id="download-btn">Download</button> <button id="cancel-btn">Cancel</button></td>
+                </tr> -->
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <hr style="height: 0rem; background-color: gray;">
+    <footer>
+        <div class="footer-section-1">
+            <div>
+                <li>GENERAL</li>
+                <li>ABOUT US</li>
+                <li>FAQ'S</li>
+                <li>INVESTORS SECTION</li>
+                <li>CAREER</li>
+                <li>NEWS</li>
+                <li>FEEDBACK</li>
+            </div>
+            <div>
+                <li>LAUNCHES</li>
+                <li>EVENTS</li>
+                <li>NVSP</li>
+            </div>
+            <div>
+                <li>OUR BRANDS</li>
+                <li>DIRECTOR'S CUT</li>
+                <li>PICTURES</li>
+                <li>ICE</li>
+                <li>IMAX</li>
+                <li>4DX</li>
+                <li>PLAY HOUSE</li>
+            </div>
+            <div>
+                <li>NEWLY ADDED</li>
+                <li>MY GOLD</li>
+                <li>MY LUXE</li>
+                <li>MY P[XL]</li>
+                <li>MY ONYX</li>
+                <li>MY NEST</li>
+                <li>V PRISTINE</li>
+            </div>
+            <div>
+                <li>CINEMAS</li>
+                <li>CINEMAS</li>
+                <li>UPCOMING</li>
+                <li>ADVERTISE</li>
+                <li>BEYOND MOVIES</li>
+                <li>BIRTHDAY REQUEST</li>
+                <li>SUBSCRIBE TO NEWSLETTER</li>
+            </div>
+        </div>
+        <div class="footer-section-2">
+            <div>
+                <img src="https://originserver-static1-uat.pvrcinemas.com/images/panacea.png" alt="">
+                <img src="https://originserver-static1-uat.pvrcinemas.com/images/nortan.png" alt="">
+            </div>
+            <h2>PRIVACY POLICY</h2>
+            <h2>TERMS & CONDITION</h2>
+            <h2>TERMS OF USE</h2>
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+
+
+
+
+
+    </footer>
+
+</body>
+<script>
+    let booking_container1 = document.querySelector("#booking-container1")
+
+    let user_id = JSON.parse(localStorage.getItem("user-id"));
+    let baseUrl = `https://movie-booking-site-1xbl.onrender.com`
+    let booking_arr = [];
+    console.log(user_id)
+
+
+    fetch(`${baseUrl}/user/${user_id}`).then(res => res.json()).then((data) => {
+        booking_arr = data.product
+        console.log(booking_arr);
+        createBookedTicketHistory(booking_arr)
+
+    })
+    function createBookedTicketHistory(data) {
+        data.forEach((el) => {
+
+            let tr = document.createElement("tr");
+            booking_container1.append(tr);
+            tr.innerHTML = `<td><img class="my-booking-image"
+                            src=${el.bookingImage}
+                            alt=""></td>
+                    <td>${el.bookingDate}</td>
+                    <td>${el.movieName}</td>
+                    <td>${el.showTime}</td>
+                    <td>${el.seatNo}</td>
+                    <td><button id="download-btn">Download</button> <button id="cancel-btn">Cancel</button></td>`
+        });
+    }
+</script>
+<script src="index.js"></script>
+
+</html>

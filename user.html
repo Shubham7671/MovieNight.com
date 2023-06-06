@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="adminPage.css">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <title>Users</title>
+    <style>
+        .user-container {
+            width: 80%;
+           min-height: 68vh;
+            border: 1px solid black;
+            margin: 40px auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            color: rgb(223, 217, 217);
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #121111;
+        }
+
+        th {
+            background-color: #232222;
+            color: rgb(118, 116, 116);
+        }
+
+        tr:hover {
+            background-color: #393636;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" data-header>
+        <div class="container">
+
+            <h1>
+                <a href="adminpage.html" class="logo">Admin Panel</a>
+            </h1>
+
+            <button class="menu-toggle-btn icon-box" data-menu-toggle-btn aria-label="Toggle Menu">
+                <span class="material-symbols-rounded  icon">menu</span>
+            </button>
+
+            <nav class="navbar">
+                <div class="container">
+
+                    <ul class="navbar-list">
+
+                        <li>
+                            <a href="adminpage.html" class="navbar-link active icon-box">
+                                <span class="material-symbols-rounded  icon">grid_view</span>
+
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="movieUpdating.html" class="navbar-link icon-box">
+                                <span class="material-symbols-rounded  icon">folder</span>
+
+                                <span>Movies</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="user.html" class="navbar-link icon-box">
+                                <span class="material-symbols-rounded  icon">list</span>
+
+                                <span>Users</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="booking.html" class="navbar-link icon-box">
+                                <span class="material-symbols-rounded  icon">bar_chart</span>
+
+                                <span>Booking</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="navbar-link icon-box">
+                                <span class="material-symbols-rounded  icon">settings</span>
+
+                                <span>Settings</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="user-action-list">
+
+                        <li>
+                            <a href="#" class="notification icon-box">
+                                <span class="material-symbols-rounded  icon">notifications</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="header-profile">
+
+                                <figure class="profile-avatar">
+                                    <img src="avatar-1.jpg" width="32" height="32">
+                                </figure>
+
+                                <div>
+                                    <p class="profile-title">Shubham Kumar</p>
+
+                                    <p class="profile-subtitle">Admin</p>
+                                </div>
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <div class="user-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Status</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody id="user-container">
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <!-- 
+- #FOOTER
+-->
+
+    <footer class="footer">
+        <div class="container">
+
+            <ul class="footer-list">
+
+                <li class="footer-item">
+                    <a href="#" class="footer-link">About</a>
+                </li>
+
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Privacy</a>
+                </li>
+
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Terms</a>
+                </li>
+
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Developers</a>
+                </li>
+
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Support</a>
+                </li>
+
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Careers</a>
+                </li>
+
+            </ul>
+
+            <p class="copyright">
+                &copy; 2023 <a href="#" class="copyright-link">Booking.com</a>. All Rights Reserved
+            </p>
+
+        </div>
+    </footer>
+
+
+</body>
+<script>
+    let baseUrl = `https://movie-booking-site-1xbl.onrender.com`
+    let user_container = document.getElementById("user-container");
+
+    fetch(`${baseUrl}/user`).then(res => res.json()).then((data) => {
+        createData(data)
+        console.log(data["id"])
+    })
+    function createData(data) {
+        user_container.innerHTML = ""
+        data.forEach(el => {
+
+            let tr = document.createElement("tr");
+            user_container.append(tr);
+
+            tr.innerHTML = ` <td>${el.id}</td>
+          <td>${el.name}</td>
+          <td>${el.username}</td>
+          <td>${el.mobile}</td>
+          <td>Active</td>
+          <td>********</td>`
+        });
+
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="myprofile.css">
+    <style>
+        * {
+            background-color: black;
+            color: white;
+        }
+
+        .seat-container {
+            width: 80%;
+            margin: 40px auto;
+            margin-top: 100px;
+
+        }
+
+        #seats {
+            margin-top: 55px;
+        }
+
+        .col {
+            border: 2px solid white;
+            width: 40px;
+            height: 40px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(17, 1fr);
+            gap: 10px;
+
+            margin-bottom: 10px;
+        }
+
+        .seat-info {
+            /* background-color: rgb(79, 75, 75); */
+            border: 1px solid grey;
+            padding: 5px 10px;
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .row-no {
+            border: none;
+        }
+
+        .selected {
+            background-color: green;
+            border: none;
+        }
+
+        .seats-selected {
+            background-color: green;
+            margin-left: 2px;
+            padding: 5px;
+            width: 35px;
+            height: 35px;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border: none;
+
+        }
+
+        .selected-seats {
+            display: flex;
+            width: 50%;
+            
+
+        }
+
+        #total {
+            font-size: 25px;
+          
+        }
+        #s_btn{
+            padding: 15px;
+            width: 20%;
+            border: 2px solid goldenrod;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 900;
+            color: gold;
+           
+            text-align: center;
+            
+        }
+        #s_btn:hover{
+            background-color: goldenrod;
+            color: black;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <img src="http://clipartmag.com/images/movie-day-clipart-2.png" alt="" class="nav-logo">
+        <input class="search" type="search" placeholder="Search by movie name">
+        <div id="anchor-list">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li id="my-booking-container"></li>
+            <li id="admin-container"><a id="admin-btn" href="adminLogin.html">Admin</a></li>
+            <li id="drop-down-container">
+
+            </li>
+            <li id="login-container"><a class="nav-btn" href="login.html">Login</a></li>
+
+        </div>
+    </nav>
+
+    <div class="seat-container">
+        <h3 style="text-align:center; margin-bottom: 15px;">Screeen This Way</h3>
+        <hr>
+
+        <div id="seats">
+
+        </div>
+ <br>
+        <div class="seat-info">
+            <div class="selected-seats">
+
+            </div>
+
+            <p id="total">Total : </p>
+            <a href="payment.html" id="s_btn">Proceed to pay</a>
+
+        </div>
+
+    </div>
+
+
+
+    <hr style="height: 0rem; background-color: gray;">
+    <footer>
+        <div class="footer-section-1">
+            <div>
+                <li>GENERAL</li>
+                <li>ABOUT US</li>
+                <li>FAQ'S</li>
+                <li>INVESTORS SECTION</li>
+                <li>CAREER</li>
+                <li>NEWS</li>
+                <li>FEEDBACK</li>
+            </div>
+            <div>
+                <li>LAUNCHES</li>
+                <li>EVENTS</li>
+                <li>NVSP</li>
+            </div>
+            <div>
+                <li>OUR BRANDS</li>
+                <li>DIRECTOR'S CUT</li>
+                <li>PICTURES</li>
+                <li>ICE</li>
+                <li>IMAX</li>
+                <li>4DX</li>
+                <li>PLAY HOUSE</li>
+            </div>
+            <div>
+                <li>NEWLY ADDED</li>
+                <li>MY GOLD</li>
+                <li>MY LUXE</li>
+                <li>MY P[XL]</li>
+                <li>MY ONYX</li>
+                <li>MY NEST</li>
+                <li>V PRISTINE</li>
+            </div>
+            <div>
+                <li>CINEMAS</li>
+                <li>CINEMAS</li>
+                <li>UPCOMING</li>
+                <li>ADVERTISE</li>
+                <li>BEYOND MOVIES</li>
+                <li>BIRTHDAY REQUEST</li>
+                <li>SUBSCRIBE TO NEWSLETTER</li>
+            </div>
+        </div>
+        <div class="footer-section-2">
+            <div>
+                <img src="https://originserver-static1-uat.pvrcinemas.com/images/panacea.png" alt="">
+                <img src="https://originserver-static1-uat.pvrcinemas.com/images/nortan.png" alt="">
+            </div>
+            <h2>PRIVACY POLICY</h2>
+            <h2>TERMS & CONDITION</h2>
+            <h2>TERMS OF USE</h2>
+            <div>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+
+
+
+
+
+    </footer>
+
+</body>
+<script src="index.js"></script>
+<script src="myprofile.js"></script>
+<script>
+    function createSeats() {
+
+        let arr = ["A", "B", "C", "D", "E", "F", "G", "H"]
+
+        for (let i = 0; i < arr.length; i++) {
+            let outer_div = document.createElement("div");
+            outer_div.className = "row"
+            outer_div.value = arr[i];
+            table.append(outer_div);
+            let row_div = document.createElement("div");
+            row_div.className = "row-no";
+            row_div.textContent = arr[i];
+            outer_div.append(row_div)
+            for (let j = 1; j <= 16; j++) {
+                let inner_div = document.createElement("div");
+                inner_div.className = "col"
+                inner_div.setAttribute("data-id", j);
+                outer_div.append(inner_div);
+            }
+        }
+    }
+
+    function createSelectedSeats() {
+        let seats = document.getElementsByClassName("selected");
+        selected.innerHTML = "";
+        for (let i = seats.length - 1; i >= 0; i--) {
+            let div = document.createElement("p");
+            div.style.backgroundColor = "green"
+            div.textContent = `${seats[i].parentNode.value}/${seats[i].getAttribute("data-id")}`
+            div.className = "seats-selected"
+            selected.append(div);
+        }
+        let total = document.getElementById("total")
+        total.textContent = `Total : ${seats.length * 199}`
+        let seats_data=document.getElementsByClassName("seats-selected");
+       let ans= storeSeatdata(seats_data);
+       localStorage.setItem("seats",JSON.stringify(ans));
+        
+    }
+    function storeSeatdata(seats_data){
+        let bag="";
+      for(let i=0;i<seats_data.length;i++){
+        bag+=seats_data[i].textContent+" , "
+      }
+      return bag;
+
+    }
+
+    let table = document.getElementById("seats");
+    let arr=[]
+
+    createSeats()
+
+    let AllSeats = document.querySelectorAll(".col")
+    let selected = document.querySelector(".selected-seats")
+    AllSeats.forEach((e) => {
+        e.addEventListener('click', (el) => {
+            
+            el.target.classList.toggle("selected")
+            let seats=`${el.target.parentNode.value}/${el.target.getAttribute("data-id")}`
+            if(arr.indexOf(seats)==-1){
+                arr.push(`${el.target.parentNode.value}/${el.target.getAttribute("data-id")}`)
+            }
+      
+            // console.log(arr)
+            // localStorage.setItem(JSON.stringify(""))
+            createSelectedSeats();
+        })
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,99 @@
+.my-profile-section{
+    width: 70%;
+    /* border: 1px solid grey; */
+   /* height: 500px; */
+   margin: 5% 15%;
+   padding: 15px;
+   
+ 
+}
+.cover-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+   
+}
+.cover-page>img{
+    width: 150px;
+}
+.cover-page>h1{
+    font-size: 45px;
+    color: #8a8686;
+}
+.my-profile-section>hr{
+    margin: 15px 0px;
+}
+
+/* ---------------------------------- */
+.information{
+    display: flex;
+    
+}
+.side-bar{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    padding: 15px;
+}
+.side-bar>button{
+    font-size: 20px;
+   background-color: #484646;
+   padding: 10px;
+}
+.side-bar>button:hover{
+    font-size: 23px;
+   background-color: white;
+   color: black;
+}
+.side-bar>button:nth-child(2){
+    font-size: 23px;
+    background-color: white;
+    color: black;
+}
+.personal-details{
+    width: 70%;
+    padding: 15px;
+}
+.personal-details{
+    display: flex;
+    flex-direction: column;
+}
+.personal-details>label{
+    margin: 10px 0px;
+    font-size: 19px;
+}
+.faq{
+    margin-top: 10px;
+}
+.faq>h3{
+    margin-top: 15px;
+    color: #484646;
+}
+.faq>p{
+    color: grey;
+}
+.personal-details>div>input{
+    width: 35%;
+  font-size: 18px;
+  padding: 6px;
+  border: 1px solid grey;
+}
+.personal-details>div>input[type="radio"]{
+    margin: 10px;
+    width: 10%;
+}
+.personal-details>div>button{
+    font-size: 18px;
+    padding: 6px;
+    border: 1px solid grey;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.personal-details>div>button:hover{
+    font-size: 19px;
+    background-color:grey;
+    color: black;
+}
+.personal-details>div>p{
+    font-size: 10px;
+}
