@@ -83,15 +83,16 @@
         .selected-seats {
             display: flex;
             width: 50%;
-            
+
 
         }
 
         #total {
             font-size: 25px;
-          
+
         }
-        #s_btn{
+
+        #s_btn {
             padding: 15px;
             width: 20%;
             border: 2px solid goldenrod;
@@ -100,15 +101,63 @@
             font-size: 20px;
             font-weight: 900;
             color: gold;
-           
+
             text-align: center;
-            
+
         }
-        #s_btn:hover{
+
+        #s_btn:hover {
             background-color: goldenrod;
             color: black;
         }
 
+        @media screen and (max-width:750px) {
+            .seat-container {
+                width: 97%;
+
+                margin-top: 80px;
+
+            }
+
+            .col {
+                border: 1px solid white;
+                width: 13px;
+                height: 13px;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+
+            }
+
+            .row {
+
+                gap: 4px;
+
+                margin-bottom: 4px;
+            }
+            .seats-selected {
+            padding: 3px;
+            width: 13px;
+            height: 13px;
+            font-size: 7px;
+            font-weight: 300;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+        #s_btn {
+            padding: 5px;
+            width: 20%;
+           
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 8px;
+            font-weight: 400;
+         
+        }
+        #total {
+            font-size: 15px;
+        }
+
+        }
     </style>
 
 
@@ -140,7 +189,7 @@
         <div id="seats">
 
         </div>
- <br>
+        <br>
         <div class="seat-info">
             <div class="selected-seats">
 
@@ -260,22 +309,22 @@
         }
         let total = document.getElementById("total")
         total.textContent = `Total : ${seats.length * 199}`
-        let seats_data=document.getElementsByClassName("seats-selected");
-       let ans= storeSeatdata(seats_data);
-       localStorage.setItem("seats",JSON.stringify(ans));
-        
+        let seats_data = document.getElementsByClassName("seats-selected");
+        let ans = storeSeatdata(seats_data);
+        localStorage.setItem("seats", JSON.stringify(ans));
+
     }
-    function storeSeatdata(seats_data){
-        let bag="";
-      for(let i=0;i<seats_data.length;i++){
-        bag+=seats_data[i].textContent+" , "
-      }
-      return bag;
+    function storeSeatdata(seats_data) {
+        let bag = "";
+        for (let i = 0; i < seats_data.length; i++) {
+            bag += seats_data[i].textContent + " , "
+        }
+        return bag;
 
     }
 
     let table = document.getElementById("seats");
-    let arr=[]
+    let arr = []
 
     createSeats()
 
@@ -283,13 +332,13 @@
     let selected = document.querySelector(".selected-seats")
     AllSeats.forEach((e) => {
         e.addEventListener('click', (el) => {
-            
+
             el.target.classList.toggle("selected")
-            let seats=`${el.target.parentNode.value}/${el.target.getAttribute("data-id")}`
-            if(arr.indexOf(seats)==-1){
+            let seats = `${el.target.parentNode.value}/${el.target.getAttribute("data-id")}`
+            if (arr.indexOf(seats) == -1) {
                 arr.push(`${el.target.parentNode.value}/${el.target.getAttribute("data-id")}`)
             }
-      
+
             // console.log(arr)
             // localStorage.setItem(JSON.stringify(""))
             createSelectedSeats();
