@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Login Form</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
   <style>
     /* CSS styles */
     body {
@@ -12,7 +14,9 @@
     }
 
     .container {
-      max-width: 400px;
+      /* max-width: 400px; */
+      width: 30%;
+
       margin: 100px auto;
       background-color: #fff;
       padding: 40px;
@@ -31,7 +35,7 @@
     }
 
     .form-group label {
-      display: block;
+      /* display: block; */
       font-weight: bold;
       margin-bottom: 5px;
       color: #555;
@@ -56,7 +60,7 @@
 
     .form-group input[type="submit"]:hover {
       background-color: #45a049;
-      
+
     }
 
     .form-group .forgot-password {
@@ -73,13 +77,23 @@
     .form-group .forgot-password a:hover {
       text-decoration: underline;
     }
-    p{
-        text-align: center;
-        color: blue;
-        font-size: 18px;
+
+    p {
+      text-align: center;
+      color: blue;
+      font-size: 18px;
     }
+    @media screen and (max-width:750px) {
+      .container{
+        width: 70%;
+      }
+      
+    }
+
+  
   </style>
 </head>
+
 <body>
   <div class="container">
     <h2> Admin Login</h2>
@@ -100,28 +114,9 @@
       </div>
     </form>
   </div>
-</body>
+
 <script src="adminLogin.js"></script>
-<script>
-  const header = document.querySelector("[data-header]");
-const navToggleBtn = document.querySelector("[data-menu-toggle-btn]");
 
-navToggleBtn.addEventListener("click", function () {
-  header.classList.toggle("active");
-});
 
-const menuBtn = document.querySelectorAll("[data-menu-btn]");
-
-for (let i = 0; i < menuBtn.length; i++) {
-  menuBtn[i].addEventListener("click", function () {
-    this.nextElementSibling.classList.toggle("active");
-  });
-}
-
-const loadMoreBtn = document.querySelector("[data-load-more]");
-
-loadMoreBtn.addEventListener("click", function () {
-  this.classList.toggle("active");
-});
-</script>
+</body>
 </html>
