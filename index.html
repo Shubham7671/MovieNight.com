@@ -12,16 +12,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        @media screen and (max-width:750px) {
+
+            .search {
+                width: 90%;
+                padding: 7px 5px;
+                position: absolute;
+                top: 65px;
+                left: 10px;
+                color: #373a3c;
+            }
+
+
+        }
+    </style>
 </head>
 
 <body>
 
- 
+
     <nav class="nav-bar">
         <img src="http://clipartmag.com/images/movie-day-clipart-2.png" alt="" class="nav-logo">
         <input class="search" type="search" placeholder="Search by movie name">
         <div id="anchor-list">
-          
+
             <li><a href="index.html">Home</a></li>
             <li><a href="#">About</a></li>
             <li id="my-booking-container"></li>
@@ -30,9 +45,9 @@
 
             </li>
             <li id="login-container"><a class="nav-btn" href="login.html">Login</a></li>
-         
+
         </div>
-       
+
     </nav>
     <div class="section-11">
         <!-- <h1>Book Your Ticket</h1> -->
@@ -180,7 +195,7 @@
 
 
     </footer>
-</div>
+    </div>
 </body>
 <script src="index.js"></script>
 

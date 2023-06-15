@@ -359,9 +359,11 @@ footer {
     .products>div{
         width: 80%;
         margin: auto;
+        /* transition: width 0 ms; */
+        
     }
-    .search{
-       display: none;
+    .products>div:hover {
+        width: 85%;
     }
     nav{
         justify-content: left;
@@ -370,5 +372,8 @@ footer {
     }
     #anchor-list{
         margin-left: 17px;
+    }
+    .footer-section-2{
+        display: none;
     }
 }
