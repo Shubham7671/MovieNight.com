@@ -97,3 +97,22 @@
 .personal-details>div>p{
     font-size: 10px;
 }
+@media screen and (max-width:750px) {
+    .information{
+        flex-direction: column;
+        
+    }
+    .personal-details{
+        width: 95%;
+    }
+    .personal-details>div>input{
+        width: 50%;
+    }
+    .side-bar{
+        display: none;
+ 
+    }
+    .my-profile-section{
+     margin-top: 80px;
+    }
+}

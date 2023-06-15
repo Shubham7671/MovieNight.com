@@ -4,20 +4,27 @@ let booking_container = document.getElementById("my-booking-container");
 let dropdown_container = document.getElementById("drop-down-container");
 let admin_container = document.getElementById("admin-container");
 let login_container = document.getElementById("login-container");
-let slider_container=document.querySelector(".slider_container")
-let slider_image=document.getElementById("slider-image");
-let slider_arr=[
-  "https://assets-in.bmscdn.com/promotions/cms/creatives/1686029849005_anubhutiuttarakhanddesktop.jpg","https://assets-in.bmscdn.com/promotions/cms/creatives/1682617779318_webbannernpa.jpg","https://assets-in.bmscdn.com/promotions/cms/creatives/1682617779318_webbannernpa.jpg",
+let slider_container = document.querySelector(".slider_container")
+let slider_image = document.getElementById("slider-image");
+let searchInput = document.querySelector(".search");
+let indexGenre = document.getElementById("index-genre")
+let indexlanguage = document.getElementById("index-language")
+let displayNull=document.querySelector(".section-11");
+
+
+
+let slider_arr = [
+  "https://assets-in.bmscdn.com/promotions/cms/creatives/1686029849005_anubhutiuttarakhanddesktop.jpg", "https://assets-in.bmscdn.com/promotions/cms/creatives/1682617779318_webbannernpa.jpg", "https://assets-in.bmscdn.com/promotions/cms/creatives/1682617779318_webbannernpa.jpg",
   "https://assets-in.bmscdn.com/promotions/cms/creatives/1686029849005_anubhutiuttarakhanddesktop.jpg"
 ]
-let i=0;
+let i = 0;
 setInterval(() => {
-  if(i<slider_arr.length-1){
+  if (i < slider_arr.length - 1) {
     i++;
-  }else{
-    i=0;
+  } else {
+    i = 0;
   }
-  slider_image.src=slider_arr[i];
+  slider_image.src = slider_arr[i];
 }, 1500);
 
 let login_status = JSON.parse(localStorage.getItem("login-status"));
@@ -57,6 +64,10 @@ fetch(product_url)
     });
     takingProductId();
   })
+
+
+
+
 function takingProductId() {
 
   let book_now_btn = document.querySelectorAll(".book-now-btn")
@@ -81,10 +92,10 @@ function ifUserIsLoggedIn() {
   admin_btn.remove();
 
 
-  booking_container.innerHTML = `<a id="my-booking" href="mybooking.html">My Bookings</a>`
+  booking_container.innerHTML = `<a id="my-booking" href="mybooking.html">Bookings</a>`
 
   dropdown_container.innerHTML = `<div class="dropdown">
-  <button class="dropbtn">${login_status[0]+"K"}</button>
+  <button class="dropbtn">${login_status[0] + "K"}</button>
   <div class="dropdown-content">
       <a id="my-profile" href="myprofile.html">My Profile</a>
       <a href="#" id="sign_out">Sign out</a>
@@ -113,5 +124,87 @@ function getCard(id, image, title, language, genre) {
 }
 
 
+searchInput.addEventListener('input', (e) => {
+  e.preventDefault();
+  searching(searchInput.value);
+})
 
+console.log(searchInput.value)
+
+function searching(el) {
+  if (el == "") {
+    window.location.reload();
+  }
+
+  fetch(`${product_url}?q=${el.toUpperCase()}`).then(res => res.json()).then((data) => {
+
+    console.log(data)
+    product_container.innerHTML = ""
+    data.forEach((e) => {
+      getCard(e.id, e.image, e.title, e.language, e.genre)
+
+    });
+    takingProductId();
+    // displayNull.style.display="none"
+  })
+
+}
+
+function filterByGenre(el) {
+  if (el == "") {
+    product_container.innerHTML=""
+    fetch(product_url)
+      .then((res) => res.json())
+      .then((data) => {
+        data.forEach((e) => {
+          getCard(e.id, e.image, e.title, e.language, e.genre)
+
+        });
+        takingProductId();
+      })
+      }else{
+
+        fetch(`${product_url}?genre=${el}`).then((res) => res.json()).then((data) => {
+          product_container.innerHTML = ""
+          data.forEach((e) => {
+            getCard(e.id, e.image, e.title, e.language, e.genre)
+  
+          });
+          takingProductId();
+        })
+      }
+ 
+}
+  function filterByLanguage(el) {
+    if (el == "") {
+      product_container.innerHTML=""
+      fetch(product_url)
+      .then((res) => res.json())
+      .then((data) => {
+        data.forEach((e) => {
+          getCard(e.id, e.image, e.title, e.language, e.genre)
+
+        });
+        takingProductId();
+      })
+    }else{
+      fetch(`${product_url}?language=${el}`).then((res) => res.json()).then((data) => {
+        product_container.innerHTML = ""
+        data.forEach((e) => {
+          getCard(e.id, e.image, e.title, e.language, e.genre)
+  
+        });
+        takingProductId();
+      })
+    }
+   
+  }
+
+  indexGenre.addEventListener('click', () => {
+    filterByGenre(indexGenre.value)
+  })
+
+  indexlanguage.addEventListener('click', () => {
+    filterByLanguage(indexlanguage.value)
+  })
 

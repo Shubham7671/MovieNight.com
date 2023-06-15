@@ -5,7 +5,9 @@
     color: white;
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
+    box-sizing: content-box;
 }
+
 
 nav {
     padding: 15px 0px;
@@ -16,6 +18,8 @@ nav {
     top: 0;
     width: 100%;
     margin-bottom: 50px;
+
+
 }
 
 #anchor-list {
@@ -86,11 +90,14 @@ nav>select {
     padding: 0px 5px;
 
 }
+
+
 .slider{
     width: 99.9%;
-    /* border: 2px solid red; */
+  
     margin: auto;
     margin-top: 54px;
+   
 }
 #slider-image{
     animation: mymove 4s infinite;
@@ -115,12 +122,14 @@ nav>select {
     width: 90%;
     margin: auto;
     margin-top: 40px;
+   
 }
 
 .container-1 {
     margin: 40px 0px;
     display: flex;
     justify-content: space-between;
+ 
 }
 
 .container-1>div>select {
@@ -130,7 +139,7 @@ nav>select {
 }
 
 .container-1>h1 {
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .products {
@@ -203,7 +212,7 @@ nav>select {
    background-image: url("https://static.vecteezy.com/system/resources/previews/001/254/680/original/cinema-background-concept-vector.jpg");
    background-size: cover;
    background-repeat: no-repeat;
-   opacity: 0.4;
+ 
    display: flex;
    justify-content: center;
    align-items: center;
@@ -251,14 +260,12 @@ footer {
 .footer-section-2 {
     display: flex;
     justify-content: space-between;
-    font-size: 13px;
+    align-items: center;
+    font-size: 10px;
     margin: 40px 0px;
 
 }
 
-.footer-section-2>div {
-    display: flex;
-}
 
 .profile {
     font-size: 18px;
@@ -330,16 +337,38 @@ footer {
 }
 
 /* # Phone */
-@media only screen and (max-width:320px){
+@media screen and (max-width:750px) {
+
     .products{
         grid-template-columns: 100%;
+        gap: 15px;
+       
     }
-}
-
-
-@media only screen and (min-width:321px) and (max-width:768px){
-
-    .products{
-        grid-template-columns: repeat(2,1fr);
+    .footer-section-1{
+       
+      display: grid;
+      grid-template-columns: 32% 32% 32%;
+      font-size: 12px;
+    }
+    .footer-section-1>div>li:first-child{
+        font-size: 14px;
+    }
+    .container-1>h1{
+        font-size: 20px;
+    }
+    .products>div{
+        width: 80%;
+        margin: auto;
+    }
+    .search{
+       display: none;
+    }
+    nav{
+        justify-content: left;
+        padding: 8px 3px;
+      
+    }
+    #anchor-list{
+        margin-left: 17px;
     }
 }

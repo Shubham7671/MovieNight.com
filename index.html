@@ -11,14 +11,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
 <body>
+
+ 
     <nav class="nav-bar">
         <img src="http://clipartmag.com/images/movie-day-clipart-2.png" alt="" class="nav-logo">
         <input class="search" type="search" placeholder="Search by movie name">
         <div id="anchor-list">
-
+          
             <li><a href="index.html">Home</a></li>
             <li><a href="#">About</a></li>
             <li id="my-booking-container"></li>
@@ -27,36 +30,38 @@
 
             </li>
             <li id="login-container"><a class="nav-btn" href="login.html">Login</a></li>
-
+         
         </div>
+       
     </nav>
     <div class="section-11">
-<h1>Book Your Ticket</h1>
+        <!-- <h1>Book Your Ticket</h1> -->
     </div>
 
     <section class="land-page">
         <div class="container-1">
             <h1>Now Showing . . .</h1>
             <div>
-                <select name="" id="">
+                <select name="" id="index-genre">
                     <option value="">GENERE</option>
-                    <option value=""></option>
+                    <option value="Action">Action</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Animation">Animation</option>
                 </select>
-                <select name="" id="">
-                    <option value="">FORMAT</option>
-                    <option value=""></option>
-                </select>
-                <select name="" id="">
+
+                <select name="" id="index-language" value="all">
                     <option value="">LANGUAGE</option>
-                    <option value=""></option>
+                    <option value="Hindi">Hindi</option>
+                    <option value="English">English</option>
+                    <option value="Punjabi">Punjabi</option>
                 </select>
             </div>
         </div>
 
 
         <div class="products">
-
-
         </div>
 
 
@@ -175,7 +180,7 @@
 
 
     </footer>
-
+</div>
 </body>
 <script src="index.js"></script>
 
