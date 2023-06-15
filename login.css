@@ -228,3 +228,13 @@ input {
     font-size: 15px;
     font-weight: 900;
 }
+@media screen and (max-width:750px) {
+
+    .body {
+        flex-direction: row;
+    }
+
+
+
+
+}

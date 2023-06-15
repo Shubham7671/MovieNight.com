@@ -88,6 +88,7 @@
             width: 300px;
             height: 200px;
             background-color: transparent;
+         
         }
 
         .item__details {
@@ -170,7 +171,7 @@
             color: white;
             border: none;
             cursor: pointer;
-            width: 100%;
+            width: 90%;
             font-size: 20px;
             font-weight: 900;
 
@@ -199,6 +200,34 @@
             margin-bottom: 10px;
             opacity: 0;
         }
+
+        @media screen and (max-width:750px) {
+
+            .payment-container:nth-child(2) {
+                display: none;
+
+            }
+
+            .payment-container:nth-child(1) {
+                width: 100%;
+            }
+
+            .payment-main-container {
+                width: 90%;
+
+            }
+
+            .search {
+                display: none;
+            }
+
+            .item__image .iphone {
+
+                width: 50px;
+
+
+            }
+        }
     </style>
 
 </head>
@@ -206,7 +235,7 @@
 <body>
     <nav class="nav-bar">
         <img src="http://clipartmag.com/images/movie-day-clipart-2.png" alt="" class="nav-logo">
-    
+        <input class="search" type="search" placeholder="Search by movie name">
         <div id="anchor-list">
 
             <li><a href="index.html">Home</a></li>
@@ -232,6 +261,8 @@
         </div>
     </section>
     </div>
+
+
     <hr style="width: 70%; margin: auto; margin-top: 20px;">
     <div class="payment-main-container">
 
@@ -420,7 +451,7 @@
     function patchTheData(arr) {
         console.log(arr);
         let obj = {
-          product:arr
+            product: arr
         }
         fetch(`${baseUrl}/user/${user_id}`, {
             method: "PATCH",
@@ -429,7 +460,7 @@
                 'Content-type': 'application/json'
             }
         })
-       
+
     }
     function BookingData(data) {
         let date = new Date();
