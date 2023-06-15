@@ -1,5 +1,4 @@
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
+
 const container = document.getElementById('container');
 let Suser = document.getElementById("sign-user");
 let Sname = document.getElementById("sign-name");
@@ -25,14 +24,6 @@ fetch(baseUrl).then(res => res.json()).then((data) => {
 
 })
 
-
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
 
 signup_btn.addEventListener('click', () => {
 	let obj = {
