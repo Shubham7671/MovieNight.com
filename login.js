@@ -64,7 +64,7 @@ signup_btn.addEventListener('click', () => {
 	setTimeout(() => {
 		window.location.reload()
 		
-	}, 2000);
+	}, 1500);
 	
 
 
@@ -104,7 +104,7 @@ function checkAuthication(arr) {
 		login_container.append(para);
 		setTimeout(() => {
 			window.location.assign("index.html")
-		}, 2000);
+		}, 1500);
 
 
 	} else {

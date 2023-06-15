@@ -17,7 +17,7 @@ btn.addEventListener('click',(e)=>{
 		container.append(para);
 		setTimeout(() => {
 		window.location.assign("adminPage.html")
-		}, 2000);
+		}, 1500);
     }else{
         let para = document.createElement("p");
 		para.innerText = "Invalid Credentials !"
